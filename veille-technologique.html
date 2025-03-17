@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> Veille Technologique </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    body.sub_page {
+      background-color: #062354;
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
+    }
+
+    .hero_area {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero_bg_box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .bg_img_box img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .veille-section {
+      background-color: #062354;
+      color: #e0e0e0;
+      padding: 40px 0;
+      border-radius: 15px;
+      box-sizing: border-box;
+    }
+
+    .veille-title {
+      color: #e0e0e0;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .veille-subtitle {
+      color: #adb5bd;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .veille-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .veille-item {
+      color: #e0e0e0;
+      padding: 20px;
+      border-radius: 5px;
+      width: 100%;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .veille-item h3 {
+      color: #00aaff;
+    }
+
+    .veille-item p {
+      color: #e0e0e0;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .rss-feed {
+      margin-top: 40px;
+    }
+
+    .rss-feed h4 {
+      color: #e0e0e0;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .rss-feed ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .rss-feed li {
+      background: #16213e;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+
+    .rss-feed li:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 170, 255, 0.5);
+    }
+
+    .rss-feed li a {
+      color: #e0e0e0;
+      text-decoration: none;
+      flex-grow: 1;
+    }
+
+    .rss-feed li img {
+      width: 80px;
+      height: auto;
+      margin-right: 15px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+
+    .rss-feed li p {
+      color: #adb5bd;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .youtube-section {
+      margin-top: 40px;
+    }
+
+    .youtube-section h4 {
+      color: #e0e0e0;
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .youtube-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .youtube-item {
+      background: #16213e;
+      padding: 20px;
+      border-radius: 5px;
+      width: 30%;
+      box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .youtube-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 170, 255, 0.5);
+    }
+
+    .youtube-item h5 {
+      color: #00d0ff; /* Change the color to a different blue */
+      margin-top: 10px;
+    }
+
+    .youtube-item p {
+      color: #adb5bd; /* Change the color to a light gray */
+      transition: color 0.3s ease;
+    }
+
+    .youtube-item:hover p {
+      color: #e0e0e0; /* Change the color on hover */
+    }
+
+    .podcast-section {
+      margin-top: 40px;
+    }
+
+    .podcast-section h4 {
+      color: #e0e0e0;
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .podcast-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .podcast-item {
+      background: #16213e;
+      padding: 20px;
+      border-radius: 5px;
+      width: 30%;
+      box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .podcast-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 170, 255, 0.5);
+    }
+
+    .podcast-item h5 {
+      color: #00d0ff; /* Change the color to a different blue */
+      margin-top: 10px;
+    }
+
+    .podcast-item p {
+      color: #adb5bd; /* Change the color to a light gray */
+      transition: color 0.3s ease;
+    }
+
+    .podcast-item:hover p {
+      color: #e0e0e0; /* Change the color on hover */
+    }
+  </style>
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="images/hero-bg.png" alt="">
+      </div>
+    </div>
+
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Portfolio
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Moi </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="btssio.html"> BTS SIO </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="competences.html">Mes compétences</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="parcours.html">Mon Parcours</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="veille-technologique.html">Veille Technologique<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="TP.html"> TP</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- Veille Technologique Section -->
+  <section class="veille-section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Veille <span>Technologique</span>
+        </h2>
+        <p>
+          Découvrez comment je reste informé des dernières tendances technologiques dans le domaine des systèmes d'information et des réseaux.
+        </p>
+      </div>
+      <div class="rss-feed">
+        <h4>Dernières Nouvelles Réseaux via RSS</h4>
+        <ul id="rss-feed-list">
+          <!-- Les articles RSS seront affichés ici -->
+        </ul>
+      </div>
+      <div class="youtube-section">
+        <h4>Chaînes YouTube</h4>
+        <div class="youtube-container">
+          <div class="youtube-item">
+            <a href="https://www.youtube.com/@Tech2TechFR/featured" target="_blank">
+              <h5>Tech2tech</h5>
+              <p>Chaîne spécialisée dans les tests de produits high-tech, les analyses technologiques et les conseils pratiques pour optimiser l'utilisation des nouvelles technologies.</p>
+            </a>
+          </div>
+          <div class="youtube-item">
+            <a href="https://www.youtube.com/@Underscore_" target="_blank">
+              <h5>Underscore</h5>
+              <p>Chaîne dédiée aux tests de produits high-tech et aux analyses technologiques.</p>
+            </a>
+          </div>
+          <div class="youtube-item">
+            <a href="https://www.youtube.com/@IT-Connect" target="_blank">
+              <h5>IT-Connect</h5>
+              <p>Chaîne proposant des vidéos sur l'administration système, le réseau, le cloud, et la cybersécurité.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="podcast-section">
+        <h4>Podcasts Réseaux</h4>
+        <div class="podcast-container">
+          <div class="podcast-item">
+            <a href="https://www.darknetdiaries.com/" target="_blank">
+              <h5>Darknet Diaries</h5>
+              <p>Podcast sur la cybersécurité et les réseaux, explorant les menaces et les solutions de sécurité.</p>
+            </a>
+          </div>
+          <div class="podcast-item">
+            <a href="https://www.smashingsecurity.com/" target="_blank">
+              <h5>Smashing Security</h5>
+              <p>Podcast qui traite des dernières actualités en matière de sécurité informatique et des réseaux.</p>
+            </a>
+          </div>
+          <div class="podcast-item">
+            <a href="https://www.risky.biz/" target="_blank">
+              <h5>Risky Business</h5>
+              <p>Podcast discutant des risques et des menaces dans le domaine de la cybersécurité et des réseaux.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end Veille Technologique section -->
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+
+  <script>
+    // Fonction pour récupérer et afficher le flux RSS
+    async function loadRSSFeed() {
+      const url = 'https://api.rss2json.com/v1/api.json?rss_url=https://krebsonsecurity.com/feed/&cacheBuster=' + new Date().getTime();
+
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const feedList = document.getElementById('rss-feed-list');
+        feedList.innerHTML = ''; // Efface les anciens articles
+
+        for (const item of data.items.slice(0, 5)) { // Affiche les 5 premiers articles
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = item.link;
+          a.textContent = item.title;
+          a.target = '_blank';
+
+          // Vérifie si l'image est disponible
+          if (item.thumbnail) {
+            const img = document.createElement('img');
+            img.src = item.thumbnail;
+            img.alt = item.title;
+            img.onerror = function() {
+              this.style.display = 'none'; // Cache l'image si elle ne peut pas être chargée
+            };
+            li.appendChild(img);
+          }
+
+          li.appendChild(a);
+
+          // Affiche un résumé après le titre
+          const summary = document.createElement('p');
+          summary.textContent = truncateText(item.description, 100); // Limite le résumé à 100 caractères
+          li.appendChild(summary);
+
+          feedList.appendChild(li);
+        }
+      } catch (error) {
+        console.error('Erreur lors du chargement du flux RSS :', error);
+      }
+    }
+
+    // Fonction pour tronquer le texte
+    function truncateText(text, maxLength) {
+      if (text.length > maxLength) {
+        return text.substring(0, maxLength) + '...'; // Tronque le texte et ajoute "..."
+      }
+      return text;
+    }
+
+    // Charger le flux RSS lorsque la page est prête
+    document.addEventListener('DOMContentLoaded', loadRSSFeed);
+  </script>
+</body>
+
+</html>

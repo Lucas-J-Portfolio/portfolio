@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> Mes Compétences </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    body.sub_page {
+      background-color: #062354; /* Same background color as "Mon Parcours" */
+      margin: 0; /* Supprime les marges par défaut */
+      padding: 0; /* Supprime les paddings par défaut */
+      color: #e0e0e0; /* Light text color */
+    }
+
+    .hero_area {
+      position: relative;
+      overflow: hidden; /* Assurez-vous que le contenu ne dépasse pas */
+    }
+
+    .hero_bg_box {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; /* Assurez-vous que l'image de fond couvre tout */
+    }
+
+    .bg_img_box img {
+      width: 100%;
+      height: auto;
+      object-fit: cover; /* Assurez-vous que l'image couvre tout l'espace */
+    }
+
+    .competence-section {
+      background-color: #062354; /* Same background color as "Mon Parcours" */
+      color: #e0e0e0; /* Light text color */
+      padding: 40px 0;
+      border-radius: 15px;
+      box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+    }
+
+    .competence-title {
+      color: #e0e0e0;
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .competence-subtitle {
+      color: #adb5bd;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .competence-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .competence {
+      text-align: center;
+      margin: 20px; /* Ajoutez des marges pour plus d'espace */
+    }
+
+    .progress-circle {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .circle {
+      transform: rotate(-90deg);
+    }
+
+    .progress {
+      stroke-dasharray: 314; /* Circonférence du cercle */
+      stroke-dashoffset: 314; /* Départ à 100% vide */
+      transition: stroke-dashoffset 1s ease-in-out;
+    }
+
+    .competence-icon {
+      font-size: 48px;
+      color: #00aaff; /* Blue color to match the theme */
+      position: absolute;
+    }
+
+    .competence p {
+      color: #e0e0e0;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    /* Center the buttons and style them */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .category-button {
+      padding: 10px 20px;
+      font-size: 16px;
+      color: white;
+      background-color: #00aaff; /* Blue color to match the theme */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      text-decoration: none;
+    }
+
+    .category-button:hover {
+      background-color: #007da2; /* Darker blue for hover effect */
+      transform: translateY(-5px);
+    }
+
+    .category-button:active {
+      transform: translateY(0);
+    }
+
+    /* Hide the buttons */
+    .hidden-button {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="images/hero-bg.png" alt="">
+      </div>
+    </div>
+
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Portfolio
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Moi </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="btssio.html"> BTS SIO </a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="competences.html">Mes compétences<span class="sr-only">(current)</span> </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="parcours.html">Mon Parcours</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="veille-technologique.html">Veille Technologique</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="TP.html"> TP</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- Competences Section -->
+
+  <section class="competence-section layout_padding">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>
+          Mes <span>Compétences</span>
+        </h2>
+        <p>
+          Découvrez mes compétences et mon niveau de maîtrise dans divers domaines.
+        </p>
+      </div>
+      <div class="buttons">
+        <button class="category-button hidden-button" data-category="os">OS</button>
+        <button class="category-button hidden-button" data-category="developpement">Développement</button>
+        <button class="category-button hidden-button" data-category="reseaux">Réseaux</button>
+        <a href="all-competences.html" target="_blank" class="category-button hidden-button">Voir +</a>
+      </div>
+      <div class="competences-content">
+        <div class="category" id="os">
+          <div class="competence-container">
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="50"></circle>
+                </svg>
+                <i class="fab fa-apple competence-icon"></i>
+              </div>
+              <p>Mac OS</p>
+            </div>
+
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="80"></circle>
+                </svg>
+                <i class="fab fa-windows competence-icon"></i>
+              </div>
+              <p>Windows</p>
+            </div>
+
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="75"></circle>
+                </svg>
+                <i class="fa-solid fa-server competence-icon"></i>
+              </div>
+              <p>Windows Server</p>
+            </div>
+
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="80"></circle>
+                </svg>
+                <i class="fa-brands fa-linux competence-icon"></i>
+              </div>
+              <p>Linux</p>
+            </div>
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="70"></circle>
+                </svg>
+                <img src="images/proxmox.png" alt="Proxmox" class="competence-icon">
+              </div>
+              <p>Proxmox</p>
+            </div>
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="85"></circle>
+                </svg>
+                <i class="fa-brands fa-windows competence-icon"></i>
+              </div>
+              <p>Windows Hyper-V</p>
+            </div>
+          </div>
+        </div>
+        <div class="category" id="developpement">
+          <div class="competence-container">
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="85"></circle>
+                </svg>
+                <i class="fab fa-html5 competence-icon"></i>
+              </div>
+              <p>HTML/CSS</p>
+            </div>
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="75"></circle>
+                </svg>
+                <i class="fab fa-js competence-icon"></i>
+              </div>
+              <p>Javascript</p>
+            </div>
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="80"></circle>
+                </svg>
+                <i class="fab fa-python competence-icon"></i>
+              </div>
+              <p>Python</p>
+            </div>
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="70"></circle>
+                </svg>
+                <i class="fab fa-docker competence-icon"></i>
+              </div>
+              <p>Docker</p>
+            </div>
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="80"></circle>
+                </svg>
+                <i class="fas fa-database competence-icon"></i>
+              </div>
+              <p>SQL</p>
+            </div>
+          </div>
+        </div>
+        <div class="category" id="reseaux">
+          <div class="competence-container">
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="80"></circle>
+                </svg>
+                <i class="fas fa-fire competence-icon"></i>
+              </div>
+              <p>Firewall</p>
+            </div>
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="75"></circle>
+                </svg>
+                <i class="fas fa-network-wired competence-icon"></i>
+              </div>
+              <p>Switch</p>
+            </div>
+            <div class="competence">
+              <div class="progress-circle">
+                <svg class="circle" width="120" height="120">
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#ddd" stroke-width="10"></circle>
+                  <circle cx="60" cy="60" r="50" fill="none" stroke="#00aaff" stroke-width="10" class="progress" data-value="85"></circle>
+                </svg>
+                <i class="fas fa-server competence-icon"></i>
+              </div>
+              <p>Serveur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function animateProgress(circle, targetValue) {
+      let currentValue = 0;
+      let maxOffset = 314; // Circonférence totale du cercle
+      let targetOffset = maxOffset - (maxOffset * targetValue) / 100;
+      let step = 2; // Vitesse de l'animation (plus grand = plus rapide)
+
+      function updateProgress() {
+        if (currentValue < targetValue) {
+          currentValue += step;
+          if (currentValue > targetValue) currentValue = targetValue;
+
+          let currentOffset = maxOffset - (maxOffset * currentValue) / 100;
+          circle.style.strokeDashoffset = currentOffset;
+
+          requestAnimationFrame(updateProgress);
+        }
+      }
+      updateProgress();
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const progressCircles = document.querySelectorAll('.progress');
+      progressCircles.forEach(circle => {
+        const targetValue = circle.getAttribute('data-value');
+        animateProgress(circle, targetValue);
+      });
+    });
+  </script>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+
+</html>
