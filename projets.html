@@ -109,86 +109,14 @@
       margin-top: 10px;
     }
 
-    .documentation_section {
-      margin-top: 40px;
-    }
-
-    .documentation_section h4 {
-      color: #00aaff;
-      font-size: 24px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .documentation_container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .documentation_item {
-      background: #16213e;
-      padding: 20px;
-      border-radius: 5px;
-      width: 30%;
-      box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .documentation_item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 20px rgba(0, 170, 255, 0.5);
-    }
-
-    .documentation_item h5 {
-      color: #00aaff;
-      margin-top: 10px;
-    }
-
-    .schemas_section {
-      margin-top: 40px;
-    }
-
-    .schemas_section h4 {
-      color: #00aaff;
-      font-size: 24px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .schemas_container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .schemas_item {
-      background: #16213e;
-      padding: 20px;
-      border-radius: 5px;
-      width: 45%;
-      box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .schemas_item:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 20px rgba(0, 170, 255, 0.5);
-    }
-
-    .schemas_item h5 {
-      color: #00aaff;
-      margin-top: 10px;
-    }
-
+    .documentation_section,
+    .schemas_section,
     .services_section {
       margin-top: 40px;
     }
 
+    .documentation_section h4,
+    .schemas_section h4,
     .services_section h4 {
       color: #00aaff;
       font-size: 24px;
@@ -196,6 +124,8 @@
       text-align: center;
     }
 
+    .documentation_container,
+    .schemas_container,
     .services_container {
       display: flex;
       flex-wrap: wrap;
@@ -203,6 +133,8 @@
       gap: 20px;
     }
 
+    .documentation_item,
+    .schemas_item,
     .service_item {
       background: #16213e;
       padding: 20px;
@@ -213,14 +145,51 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    .documentation_item:hover,
+    .schemas_item:hover,
     .service_item:hover {
       transform: translateY(-5px);
       box-shadow: 0 5px 20px rgba(0, 170, 255, 0.5);
     }
 
+    .documentation_item h5,
+    .schemas_item h5,
     .service_item h5 {
       color: #00aaff;
       margin-top: 10px;
+    }
+
+    /* Tab styles */
+    .nav-tabs {
+      border-bottom: none;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+
+    .nav-tabs .nav-link {
+      color: #e0e0e0;
+      background-color: #062354;
+      border: 2px solid #00aaff;
+      border-radius: 5px;
+      margin: 0 15px;
+      padding: 10px 25px;
+      font-size: 18px;
+    }
+
+    .nav-tabs .nav-link.active {
+      background-color: #00aaff;
+      color: #e0e0e0;
+    }
+
+    .tab-content {
+      border-top: none;
+    }
+
+    .tab-pane {
+      padding: 20px;
+      background-color: #062354;
+      border-radius: 5px;
     }
   </style>
 </head>
@@ -266,7 +235,7 @@
                 <a class="nav-link" href="veille-technologique.html">Veille Technologique</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="Projets.html"> Projets<span class="sr-only">(current)</span> </a>
+                <a class="nav-link" href="projets.html"> Projets<span class="sr-only">(current)</span> </a>
               </li>
             </ul>
           </div>
@@ -287,130 +256,192 @@
           Découvrez mes projets et travaux pratiques réalisés dans le cadre de ma formation.
         </p>
       </div>
-      <div class="tp_container">
-        <div class="tp_item">
-          <h3>Projet CUB</h3>
-          <p>Description du projet CUB :</p>
-          <p>Objectifs, technologies utilisées, et résultats obtenus.</p>
+
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" id="projetsTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="cub-tab" data-toggle="tab" href="#cub" role="tab" aria-controls="cub" aria-selected="true">Projet CUB</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="false">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="entreprise-tab" data-toggle="tab" href="#entreprise" role="tab" aria-controls="entreprise" aria-selected="false">Entreprise</a>
+        </li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="cub" role="tabpanel" aria-labelledby="cub-tab">
+          <div class="tp_container">
+            <div class="tp_item">
+              <h3>Description du Projet CUB</h3>
+              <p>Objectifs, technologies utilisées, et résultats obtenus.</p>
+              <img src="images/projetcub.png" alt="Projet CUB" style="margin-top: 20px; max-width: 50%; height: auto;">
+            </div>
+          </div>
+          <div class="documentation_section">
+            <h4>Documentation du Projet CUB</h4>
+            <div class="documentation_container">
+              <div class="documentation_item">
+                <h5>Introduction</h5>
+                <p>Présentation générale du projet CUB, son contexte et ses objectifs.</p>
+              </div>
+              <div class="documentation_item">
+                <h5>Fonctionnalités</h5>
+                <p>Description des fonctionnalités principales du projet CUB.</p>
+              </div>
+              <div class="documentation_item">
+                <h5>Technologies Utilisées</h5>
+                <p>Liste des technologies, outils et langages de programmation utilisés dans le projet.</p>
+              </div>
+              <div class="documentation_item">
+                <h5>Installation</h5>
+                <p>Instructions pour installer et configurer le projet CUB.</p>
+              </div>
+              <div class="documentation_item">
+                <h5>Utilisation</h5>
+                <p>Guide d'utilisation du projet CUB, avec des exemples et des cas d'usage.</p>
+              </div>
+              <div class="documentation_item">
+                <h5>Contributions</h5>
+                <p>Comment contribuer au projet CUB, les bonnes pratiques et les lignes directrices.</p>
+              </div>
+            </div>
+          </div>
+          <div class="schemas_section">
+            <h4>Schémas du Projet CUB</h4>
+            <div class="schemas_container">
+              <div class="schemas_item">
+                <h5>Schéma Logique</h5>
+                <p>Description et illustration du schéma logique du projet CUB.</p>
+              </div>
+              <div class="schemas_item">
+                <h5>Schéma Physique</h5>
+                <p>Description et illustration du schéma physique du projet CUB.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab">
+          <div class="tp_container">
+            <div class="tp_item">
+              <h3>Description du Projet Portfolio</h3>
+              <p>Objectifs, technologies utilisées, et résultats obtenus.</p>
+            </div>
+          </div>
+          <div class="services_section">
+            <h4>Services Documentés</h4>
+            <div class="services_container">
+              <div class="service_item">
+                <h5>DHCP</h5>
+                <p>Documentation pour le service DHCP.</p>
+              </div>
+              <div class="service_item">
+                <h5>SSH</h5>
+                <p>Documentation pour le service SSH.</p>
+              </div>
+              <div class="service_item">
+                <h5>APT</h5>
+                <p>Documentation pour le service APT.</p>
+              </div>
+              <div class="service_item">
+                <h5>Zabbix</h5>
+                <p>Documentation pour le service Zabbix.</p>
+              </div>
+              <div class="service_item">
+                <h5>GLPI</h5>
+                <p>Documentation pour le service GLPI.</p>
+              </div>
+              <div class="service_item">
+                <h5>TFTP</h5>
+                <p>Documentation pour le service TFTP.</p>
+              </div>
+              <div class="service_item">
+                <h5>Stormshield</h5>
+                <p>Documentation pour le service Stormshield.</p>
+              </div>
+              <div class="service_item">
+                <h5>Domain Name System</h5>
+                <p>Documentation pour le service Domain Name System.</p>
+              </div>
+              <div class="service_item">
+                <h5>Sauvegarde</h5>
+                <p>Documentation pour le service Sauvegarde.</p>
+              </div>
+              <div class="service_item">
+                <h5>Domaine</h5>
+                <p>Documentation pour le service Domaine.</p>
+              </div>
+              <div class="service_item">
+                <h5>Radius</h5>
+                <p>Documentation pour le service Radius.</p>
+              </div>
+              <div class="service_item">
+                <h5>NTP</h5>
+                <p>Documentation pour le service NTP.</p>
+              </div>
+              <div class="service_item">
+                <h5>IPBX</h5>
+                <p>Documentation pour le service IPBX.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="entreprise" role="tabpanel" aria-labelledby="entreprise-tab">
+          <div class="tp_container">
+            <div class="tp_item">
+              <h3>Description du Projet Entreprise</h3>
+              <p>Objectifs, technologies utilisées, et résultats obtenus.</p>
+            </div>
+          </div>
+          <div class="documentation_section">
+            <h4>Documentation du Projet Entreprise</h4>
+            <div class="documentation_container">
+              <div class="documentation_item">
+                <h5>Introduction</h5>
+                <p>Présentation générale du projet Entreprise, son contexte et ses objectifs.</p>
+              </div>
+              <div class="documentation_item">
+                <h5>Fonctionnalités</h5>
+                <p>Description des fonctionnalités principales du projet Entreprise.</p>
+              </div>
+              <div class="documentation_item">
+                <h5>Technologies Utilisées</h5>
+                <p>Liste des technologies, outils et langages de programmation utilisés dans le projet.</p>
+              </div>
+              <div class="documentation_item">
+                <h5>Installation</h5>
+                <p>Instructions pour installer et configurer le projet Entreprise.</p>
+              </div>
+              <div class="documentation_item">
+                <h5>Utilisation</h5>
+                <p>Guide d'utilisation du projet Entreprise, avec des exemples et des cas d'usage.</p>
+              </div>
+              <div class="documentation_item">
+                <h5>Contributions</h5>
+                <p>Comment contribuer au projet Entreprise, les bonnes pratiques et les lignes directrices.</p>
+              </div>
+            </div>
+          </div>
+          <div class="schemas_section">
+            <h4>Schémas du Projet Entreprise</h4>
+            <div class="schemas_container">
+              <div class="schemas_item">
+                <h5>Schéma Logique</h5>
+                <p>Description et illustration du schéma logique du projet Entreprise.</p>
+              </div>
+              <div class="schemas_item">
+                <h5>Schéma Physique</h5>
+                <p>Description et illustration du schéma physique du projet Entreprise.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
   <!-- end TP section -->
-
-  <!-- Documentation Section -->
-  <section class="documentation_section layout_padding">
-    <div class="container">
-      <h4>Documentation du Projet CUB</h4>
-      <div class="documentation_container">
-        <div class="documentation_item">
-          <h5>Introduction</h5>
-          <p>Présentation générale du projet CUB, son contexte et ses objectifs.</p>
-        </div>
-        <div class="documentation_item">
-          <h5>Fonctionnalités</h5>
-          <p>Description des fonctionnalités principales du projet CUB.</p>
-        </div>
-        <div class="documentation_item">
-          <h5>Technologies Utilisées</h5>
-          <p>Liste des technologies, outils et langages de programmation utilisés dans le projet.</p>
-        </div>
-        <div class="documentation_item">
-          <h5>Installation</h5>
-          <p>Instructions pour installer et configurer le projet CUB.</p>
-        </div>
-        <div class="documentation_item">
-          <h5>Utilisation</h5>
-          <p>Guide d'utilisation du projet CUB, avec des exemples et des cas d'usage.</p>
-        </div>
-        <div class="documentation_item">
-          <h5>Contributions</h5>
-          <p>Comment contribuer au projet CUB, les bonnes pratiques et les lignes directrices.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end Documentation section -->
-
-  <!-- Schemas Section -->
-  <section class="schemas_section layout_padding">
-    <div class="container">
-      <h4>Schémas du Projet CUB</h4>
-      <div class="schemas_container">
-        <div class="schemas_item">
-          <h5>Schéma Logique</h5>
-          <p>Description et illustration du schéma logique du projet CUB.</p>
-        </div>
-        <div class="schemas_item">
-          <h5>Schéma Physique</h5>
-          <p>Description et illustration du schéma physique du projet CUB.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end Schemas section -->
-
-  <!-- Services Section -->
-  <section class="services_section layout_padding">
-    <div class="container">
-      <h4>Services Documentés</h4>
-      <div class="services_container">
-        <div class="service_item">
-          <h5>DHCP</h5>
-          <p>Documentation pour le service DHCP.</p>
-        </div>
-        <div class="service_item">
-          <h5>SSH</h5>
-          <p>Documentation pour le service SSH.</p>
-        </div>
-        <div class="service_item">
-          <h5>APT</h5>
-          <p>Documentation pour le service APT.</p>
-        </div>
-        <div class="service_item">
-          <h5>Zabbix</h5>
-          <p>Documentation pour le service Zabbix.</p>
-        </div>
-        <div class="service_item">
-          <h5>GLPI</h5>
-          <p>Documentation pour le service GLPI.</p>
-        </div>
-        <div class="service_item">
-          <h5>TFTP</h5>
-          <p>Documentation pour le service TFTP.</p>
-        </div>
-        <div class="service_item">
-          <h5>Stormshield</h5>
-          <p>Documentation pour le service Stormshield.</p>
-        </div>
-        <div class="service_item">
-          <h5>Domain Name System</h5>
-          <p>Documentation pour le service Domain Name System.</p>
-        </div>
-        <div class="service_item">
-          <h5>Sauvegarde</h5>
-          <p>Documentation pour le service Sauvegarde.</p>
-        </div>
-        <div class="service_item">
-          <h5>Domaine</h5>
-          <p>Documentation pour le service Domaine.</p>
-        </div>
-        <div class="service_item">
-          <h5>Radius</h5>
-          <p>Documentation pour le service Radius.</p>
-        </div>
-        <div class="service_item">
-          <h5>NTP</h5>
-          <p>Documentation pour le service NTP.</p>
-        </div>
-        <div class="service_item">
-          <h5>IPBX</h5>
-          <p>Documentation pour le service IPBX.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- end Services section -->
 
   <!-- jQuery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
