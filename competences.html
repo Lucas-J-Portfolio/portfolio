@@ -15,34 +15,34 @@
 
   <title> Mes Compétences </title>
 
-  <!-- bootstrap core css -->
+  <!-- Bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
-  <!-- fonts style -->
+  <!-- Fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-  <!-- owl slider stylesheet -->
+  <!-- Owl slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-  <!-- font awesome style -->
+  <!-- Font awesome style -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
+  <!-- Responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
   <style>
     body.sub_page {
-      background-color: #062354; /* Same background color as "Mon Parcours" */
-      margin: 0; /* Supprime les marges par défaut */
-      padding: 0; /* Supprime les paddings par défaut */
-      color: #e0e0e0; /* Light text color */
+      background-color: #062354;
+      margin: 0;
+      padding: 0;
+      color: #e0e0e0;
     }
 
     .hero_area {
       position: relative;
-      overflow: hidden; /* Assurez-vous que le contenu ne dépasse pas */
+      overflow: hidden;
     }
 
     .hero_bg_box {
@@ -51,21 +51,21 @@
       left: 0;
       width: 100%;
       height: 100%;
-      overflow: hidden; /* Assurez-vous que l'image de fond couvre tout */
+      overflow: hidden;
     }
 
     .bg_img_box img {
       width: 100%;
       height: auto;
-      object-fit: cover; /* Assurez-vous que l'image couvre tout l'espace */
+      object-fit: cover;
     }
 
     .competence-section {
-      background-color: #062354; /* Same background color as "Mon Parcours" */
-      color: #e0e0e0; /* Light text color */
+      background-color: #062354;
+      color: #e0e0e0;
       padding: 40px 0;
       border-radius: 15px;
-      box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+      box-sizing: border-box;
     }
 
     .competence-title {
@@ -92,7 +92,7 @@
 
     .competence {
       text-align: center;
-      margin: 20px; /* Ajoutez des marges pour plus d'espace */
+      margin: 20px;
     }
 
     .progress-circle {
@@ -110,14 +110,14 @@
     }
 
     .progress {
-      stroke-dasharray: 314; /* Circonférence du cercle */
-      stroke-dashoffset: 314; /* Départ à 100% vide */
+      stroke-dasharray: 314;
+      stroke-dashoffset: 314;
       transition: stroke-dashoffset 1s ease-in-out;
     }
 
     .competence-icon {
       font-size: 48px;
-      color: #00aaff; /* Blue color to match the theme */
+      color: #00aaff;
       position: absolute;
     }
 
@@ -127,7 +127,6 @@
       margin-top: 10px;
     }
 
-    /* Center the buttons and style them */
     .buttons {
       display: flex;
       justify-content: center;
@@ -139,7 +138,7 @@
       padding: 10px 20px;
       font-size: 16px;
       color: white;
-      background-color: #00aaff; /* Blue color to match the theme */
+      background-color: #00aaff;
       border: none;
       border-radius: 5px;
       cursor: pointer;
@@ -148,7 +147,7 @@
     }
 
     .category-button:hover {
-      background-color: #007da2; /* Darker blue for hover effect */
+      background-color: #007da2;
       transform: translateY(-5px);
     }
 
@@ -156,7 +155,6 @@
       transform: translateY(0);
     }
 
-    /* Hide the buttons */
     .hidden-button {
       display: none;
     }
@@ -173,7 +171,7 @@
       </div>
     </div>
 
-    <!-- header section strats -->
+    <!-- header section starts -->
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
@@ -188,24 +186,24 @@
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ">
-              <li class="nav-item ">
-                <a class="nav-link" href="index.html">Moi </a>
-              </li>
+            <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="btssio.html"> BTS SIO </a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="competences.html">Compétences<span class="sr-only">(current)</span> </a>
+                <a class="nav-link" href="index.html">Moi</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="parcours.html">Parcours</a>
               </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="competences.html">Compétences <span class="sr-only">(current)</span></a>
+              </li>
               <li class="nav-item">
-                <a class="nav-link" href="veille-technologique.html">Veille Technologique</a>
+                <a class="nav-link" href="btssio.html">BTS SIO</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="projets.html">Projets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="veille-technologique.html">Veille Technologique</a>
               </li>
             </ul>
           </div>
@@ -216,7 +214,6 @@
   </div>
 
   <!-- Competences Section -->
-
   <section class="competence-section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
@@ -396,9 +393,9 @@
   <script>
     function animateProgress(circle, targetValue) {
       let currentValue = 0;
-      let maxOffset = 314; // Circonférence totale du cercle
+      let maxOffset = 314;
       let targetOffset = maxOffset - (maxOffset * targetValue) / 100;
-      let step = 2; // Vitesse de l'animation (plus grand = plus rapide)
+      let step = 2;
 
       function updateProgress() {
         if (currentValue < targetValue) {
@@ -425,15 +422,15 @@
 
   <!-- jQuery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
+  <!-- Popper js -->
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
   </script>
-  <!-- bootstrap js -->
+  <!-- Bootstrap js -->
   <script type="text/javascript" src="js/bootstrap.js"></script>
-  <!-- owl slider -->
+  <!-- Owl slider -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
   </script>
-  <!-- custom js -->
+  <!-- Custom js -->
   <script type="text/javascript" src="js/custom.js"></script>
 
 </body>
