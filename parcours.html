@@ -1,138 +1,317 @@
-<style>
-  body {
-    background-color: #062354;
-  }
+<!DOCTYPE html>
+<html>
 
-  .hero_area {
-    background-color: transparent;
-  }
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
 
-  .timeline {
-    position: relative;
-    max-width: 600px; /* Réduit la largeur maximale */
-    margin: auto;
-    padding: 20px 0; /* Réduit le padding */
-  }
+  <title>Mon Parcours</title>
 
-  .timeline-line {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 3px; /* Réduit l'épaisseur de la ligne */
-    height: 100%;
-    background: #00aaff;
-    transform: translateX(-50%);
-  }
+  <!-- Bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 
-  .timeline-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    margin: 20px 0; /* Réduit la marge entre les éléments */
-    width: 100%;
-  }
+  <!-- Fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-  .timeline-dot {
-    width: 15px; /* Réduit la taille du point */
-    height: 15px; /* Réduit la taille du point */
-    background-color: #00aaff;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-  }
+  <!-- Owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
-  .timeline-box {
-    background: #16213e;
-    color: #e0e0e0;
-    padding: 10px; /* Réduit le padding */
-    border-radius: 5px;
-    width: 35%; /* Réduit la largeur de la boîte */
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 0 8px rgba(0, 170, 255, 0.3); /* Réduit l'ombre */
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
+  <!-- Font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
 
-  .timeline-box:hover {
-    background: #0f3460;
-    transform: translateY(-3px); /* Réduit le déplacement au survol */
-    box-shadow: 0 3px 15px rgba(0, 170, 255, 0.5); /* Réduit l'ombre au survol */
-  }
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- Responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
 
-  .timeline-box:hover h3,
-  .timeline-box:hover p {
-    color: #e0e0e0;
-  }
+  <style>
+    body {
+      background-color: #062354;
+    }
 
-  .timeline-item:nth-child(odd) .timeline-box {
-    margin-left: auto;
-  }
+    .hero_area {
+      background-color: transparent;
+    }
 
-  .timeline-item:nth-child(even) .timeline-box {
-    margin-right: auto;
-  }
+    .timeline {
+      position: relative;
+      max-width: 600px;
+      margin: auto;
+      padding: 20px 0;
+    }
 
-  .heading_container h2 {
-    color: #e0e0e0;
-    font-size: 24px; /* Réduit la taille du titre */
-  }
+    .timeline-line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background: #00aaff;
+      transform: translateX(-50%);
+    }
 
-  .heading_container span {
-    color: #00aaff;
-  }
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 20px 0;
+      width: 100%;
+    }
 
-  .modal-content {
-    background-color: #16213e;
-    color: #e0e0e0;
-  }
+    .timeline-dot {
+      width: 15px;
+      height: 15px;
+      background-color: #00aaff;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+    }
 
-  .modal-header {
-    padding: 8px; /* Réduit le padding */
-    border-bottom: none;
-    position: relative;
-  }
+    .timeline-box {
+      background: #16213e;
+      color: #e0e0e0;
+      padding: 10px;
+      border-radius: 5px;
+      width: 35%;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 0 8px rgba(0, 170, 255, 0.3);
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-  .modal-body {
-    padding: 15px; /* Réduit le padding */
-  }
+    .timeline-box:hover {
+      background: #0f3460;
+      transform: translateY(-3px);
+      box-shadow: 0 3px 15px rgba(0, 170, 255, 0.5);
+    }
 
-  .modal-footer {
-    border-top: none;
-    padding: 8px; /* Réduit le padding */
-  }
+    .timeline-box:hover h3,
+    .timeline-box:hover p {
+      color: #e0e0e0;
+    }
 
-  .modal-header .close {
-    margin: 0;
-    padding: 8px; /* Réduit le padding */
-    color: #e0e0e0;
-    opacity: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 25px; /* Réduit la taille du bouton de fermeture */
-    height: 25px; /* Réduit la taille du bouton de fermeture */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+    .timeline-item:nth-child(odd) .timeline-box {
+      margin-left: auto;
+    }
 
-  .modal-header .close:hover {
-    color: #00aaff;
-  }
+    .timeline-item:nth-child(even) .timeline-box {
+      margin-right: auto;
+    }
 
-  .timeline-box h3 {
-    color: #00aaff;
-    font-size: 18px; /* Réduit la taille du titre */
-  }
+    .heading_container h2 {
+      color: #e0e0e0;
+      font-size: 24px;
+    }
 
-  .timeline-box p {
-    font-size: 14px; /* Réduit la taille du texte */
-  }
-</style>
+    .heading_container span {
+      color: #00aaff;
+    }
+
+    .modal-content {
+      background-color: #16213e;
+      color: #e0e0e0;
+    }
+
+    .modal-header {
+      padding: 8px;
+      border-bottom: none;
+      position: relative;
+    }
+
+    .modal-body {
+      padding: 15px;
+    }
+
+    .modal-footer {
+      border-top: none;
+      padding: 8px;
+    }
+
+    .modal-header .close {
+      margin: 0;
+      padding: 8px;
+      color: #e0e0e0;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .modal-header .close:hover {
+      color: #00aaff;
+    }
+
+    .timeline-box h3 {
+      color: #00aaff;
+      font-size: 18px;
+    }
+
+    .timeline-box p {
+      font-size: 14px;
+    }
+  </style>
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section starts -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              Portfolio
+            </span>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Moi</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="parcours.html">Parcours <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="competences.html">Compétences</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="btssio.html">BTS SIO</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="projets.html">Projets</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="veille-technologique.html">Veille Technologique</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- Mon Parcours section -->
+  <section class="timeline_section layout_padding" style="padding-top: 100px;">
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2>Mon <span>Parcours</span></h2>
+      </div>
+      <div class="timeline" style="margin-top: 50px;">
+        <div class="timeline-line"></div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <a href="#" class="timeline-box" data-toggle="modal" data-target="#optionsModal">
+            <h3>2023 - Présent</h3>
+            <p>BTS SIO - SISR - Lycée Suzanne Valadon - Limoges - Alternance Orange Wholesale</p>
+          </a>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <a href="https://www.mission-locale.fr/annuaire/agence/mission-locale-de-limoges" class="timeline-box">
+            <h3>2022</h3>
+            <p>Stage en tant que Conseiller Numérique - Mission Locale de Limoges</p>
+          </a>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <a href="https://crimson-factory.fr/" class="timeline-box">
+            <h3>2022</h3>
+            <p>Stage en développement web - Entreprise Crimson Factory</p>
+          </a>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <a href="https://www.axyus.com/" class="timeline-box">
+            <h3>2022</h3>
+            <p>Stage en développement web / Administration réseau - Entreprise Axyus</p>
+          </a>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <a href="https://www.flsh.unilim.fr/" class="timeline-box">
+            <h3>2019 - 2020</h3>
+            <p>L1 LLCER Anglais - Faculté des Lettres et Sciences Humaines - Limoges</p>
+          </a>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <a href="https://www.fdse.unilim.fr/" class="timeline-box">
+            <h3>2018 - 2019</h3>
+            <p>L1 AES - Faculté de Droit et des Sciences Économiques - Limoges</p>
+          </a>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <a href="https://www.cite-scolaire-aubusson.fr/" class="timeline-box">
+            <h3>2017 - 2018</h3>
+            <p>BAC ES - Lycée Eugène Jamot - Aubusson</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end Mon Parcours section -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="optionsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-between">
+            <a href="http://www.lyc-valadon.ac-limoges.fr/" class="btn btn-primary mr-2">BTS SIO - SISR - Lycée Suzanne Valadon</a>
+            <a href="https://wholesalefrance.orange.fr/fr/" class="btn btn-primary ml-2">Alternance Orange Wholesale</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- Bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- Owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- Custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+
+</body>
+
+</html>
