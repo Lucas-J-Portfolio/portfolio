@@ -97,6 +97,7 @@
       width: 100%;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
     }
 
     .tp_item h3 {
@@ -191,6 +192,21 @@
       background-color: #062354;
       border-radius: 5px;
     }
+
+    /* Modal styles */
+    .modal-content {
+      background-color: #062354;
+      color: #e0e0e0;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .modal-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
   </style>
 </head>
 
@@ -283,11 +299,11 @@
           <div class="schemas_section">
             <h4>Schémas du Projet CUB</h4>
             <div class="schemas_container">
-              <div class="schemas_item">
+              <div class="schemas_item" data-toggle="modal" data-target="#logiqueModal">
                 <h5>Schéma Logique</h5>
                 <p>Description et illustration du schéma logique du projet CUB.</p>
               </div>
-              <div class="schemas_item">
+              <div class="schemas_item" data-toggle="modal" data-target="#physiqueModal">
                 <h5>Schéma Physique</h5>
                 <p>Description et illustration du schéma physique du projet CUB.</p>
               </div>
@@ -357,6 +373,39 @@
     </div>
   </section>
   <!-- end TP section -->
+
+  <!-- Modals -->
+  <div class="modal fade" id="logiqueModal" tabindex="-1" role="dialog" aria-labelledby="logiqueModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="logiqueModalLabel">Schéma Logique</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="images/logique.png" class="modal-img" alt="Schéma Logique">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="physiqueModal" tabindex="-1" role="dialog" aria-labelledby="physiqueModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="physiqueModalLabel">Schéma Physique</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="images/physique.png" class="modal-img" alt="Schéma Physique">
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- jQuery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
