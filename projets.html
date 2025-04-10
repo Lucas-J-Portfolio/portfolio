@@ -207,6 +207,20 @@
       height: auto;
       border-radius: 5px;
     }
+
+    .open-image-btn {
+      background-color: #00aaff;
+      color: #e0e0e0;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .open-image-btn:hover {
+      background-color: #0088cc;
+    }
   </style>
 </head>
 
@@ -386,6 +400,7 @@
         </div>
         <div class="modal-body">
           <img src="images/logique.png" class="modal-img" alt="Schéma Logique">
+          <button class="open-image-btn" onclick="window.open('images/logique.png', '_blank')">Ouvrir en grand</button>
         </div>
       </div>
     </div>
@@ -402,6 +417,7 @@
         </div>
         <div class="modal-body">
           <img src="images/physique.png" class="modal-img" alt="Schéma Physique">
+          <button class="open-image-btn" onclick="window.open('images/physique.png', '_blank')">Ouvrir en grand</button>
         </div>
       </div>
     </div>
