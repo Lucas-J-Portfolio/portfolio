@@ -94,7 +94,7 @@
       color: #e0e0e0;
       padding: 20px;
       border-radius: 5px;
-      width: 100%;
+      width: 30%;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
@@ -208,7 +208,7 @@
       border-radius: 5px;
     }
 
-    .open-image-btn {
+    .open-pdf-btn {
       background-color: #00aaff;
       color: #e0e0e0;
       border: none;
@@ -218,7 +218,7 @@
       margin-top: 10px;
     }
 
-    .open-image-btn:hover {
+    .open-pdf-btn:hover {
       background-color: #0088cc;
     }
   </style>
@@ -315,65 +315,44 @@
             <div class="schemas_container">
               <div class="schemas_item" data-toggle="modal" data-target="#logiqueModal">
                 <h5>Schéma Logique</h5>
-                <p>Description et illustration du schéma logique du projet CUB.</p>
               </div>
               <div class="schemas_item" data-toggle="modal" data-target="#physiqueModal">
                 <h5>Schéma Physique</h5>
-                <p>Description et illustration du schéma physique du projet CUB.</p>
               </div>
             </div>
           </div>
           <div class="documentation_section">
             <h4>Documentation du Projet CUB</h4>
-              <div class="documentation_item">
+            <div class="documentation_container">
+              <div class="documentation_item" data-toggle="modal" data-target="#dhcpModal">
                 <h5>DHCP</h5>
-                <p>Documentation sur la configuration et l'utilisation de DHCP dans le projet.</p>
-                <img src="path/to/dhcp_image.png" alt="DHCP Image" style="margin-top: 10px; max-width: 100%; height: auto;">
               </div>
-              <div class="documentation_item">
+              <div class="documentation_item" data-toggle="modal" data-target="#dnsModal">
                 <h5>DNS</h5>
-                <p>Documentation sur la configuration et l'utilisation de DNS dans le projet.</p>
-                <img src="path/to/dns_image.png" alt="DNS Image" style="margin-top: 10px; max-width: 100%; height: auto;">
               </div>
-              <div class="documentation_item">
+              <div class="documentation_item" data-toggle="modal" data-target="#glpiModal">
                 <h5>GLPI</h5>
-                <p>Documentation sur la configuration et l'utilisation de GLPI dans le projet.</p>
-                <img src="path/to/glpi_image.png" alt="GLPI Image" style="margin-top: 10px; max-width: 100%; height: auto;">
               </div>
-              <div class="documentation_item">
+              <div class="documentation_item" data-toggle="modal" data-target="#haproxyModal">
                 <h5>HA Proxy</h5>
-                <p>Documentation sur la configuration et l'utilisation de HA Proxy dans le projet.</p>
-                <img src="path/to/haproxy_image.png" alt="HA Proxy Image" style="margin-top: 10px; max-width: 100%; height: auto;">
               </div>
-              <div class="documentation_item">
+              <div class="documentation_item" data-toggle="modal" data-target="#proxmoxModal">
                 <h5>Proxmox</h5>
-                <p>Documentation sur la configuration et l'utilisation de Proxmox dans le projet.</p>
-                <img src="path/to/proxmox_image.png" alt="Proxmox Image" style="margin-top: 10px; max-width: 100%; height: auto;">
               </div>
-              <div class="documentation_item">
+              <div class="documentation_item" data-toggle="modal" data-target="#tftpModal">
                 <h5>TFTP</h5>
-                <p>Documentation sur la configuration et l'utilisation de TFTP dans le projet.</p>
-                <img src="path/to/tftp_image.png" alt="TFTP Image" style="margin-top: 10px; max-width: 100%; height: auto;">
               </div>
-              <div class="documentation_item">
+              <div class="documentation_item" data-toggle="modal" data-target="#voipModal">
                 <h5>VOIP</h5>
-                <p>Documentation sur la configuration et l'utilisation de VOIP dans le projet.</p>
-                <img src="path/to/voip_image.png" alt="VOIP Image" style="margin-top: 10px; max-width: 100%; height: auto;">
               </div>
-              <div class="documentation_item">
+              <div class="documentation_item" data-toggle="modal" data-target="#windowsModal">
                 <h5>Windows</h5>
-                <p>Documentation sur la configuration et l'utilisation de Windows dans le projet.</p>
-                <img src="path/to/windows_image.png" alt="Windows Image" style="margin-top: 10px; max-width: 100%; height: auto;">
               </div>
-              <div class="documentation_item">
+              <div class="documentation_item" data-toggle="modal" data-target="#zabbixModal">
                 <h5>Zabbix</h5>
-                <p>Documentation sur la configuration et l'utilisation de Zabbix dans le projet.</p>
-                <img src="path/to/zabbix_image.png" alt="Zabbix Image" style="margin-top: 10px; max-width: 100%; height: auto;">
               </div>
-              <div class="documentation_item">
+              <div class="documentation_item" data-toggle="modal" data-target="#fluxModal">
                 <h5>Flux</h5>
-                <p>Documentation sur la configuration et l'utilisation de Flux dans le projet.</p>
-                <img src="path/to/flux_image.png" alt="Flux Image" style="margin-top: 10px; max-width: 100%; height: auto;">
               </div>
             </div>
           </div>
@@ -425,7 +404,7 @@
         </div>
         <div class="modal-body">
           <img src="images/logique.png" class="modal-img" alt="Schéma Logique">
-          <button class="open-image-btn" onclick="window.open('images/logique.png', '_blank')">Ouvrir en grand</button>
+          <button class="open-pdf-btn" onclick="window.open('path/to/logique.pdf', '_blank')">Ouvrir le PDF</button>
         </div>
       </div>
     </div>
@@ -442,7 +421,177 @@
         </div>
         <div class="modal-body">
           <img src="images/physique.png" class="modal-img" alt="Schéma Physique">
-          <button class="open-image-btn" onclick="window.open('images/physique.png', '_blank')">Ouvrir en grand</button>
+          <button class="open-pdf-btn" onclick="window.open('path/to/physique.pdf', '_blank')">Ouvrir le PDF</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="dhcpModal" tabindex="-1" role="dialog" aria-labelledby="dhcpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dhcpModalLabel">DHCP</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button class="open-pdf-btn" onclick="window.open('path/to/dhcp1.pdf', '_blank')">Ouvrir le PDF 1</button>
+          <button class="open-pdf-btn" onclick="window.open('path/to/dhcp2.pdf', '_blank')">Ouvrir le PDF 2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="dnsModal" tabindex="-1" role="dialog" aria-labelledby="dnsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="dnsModalLabel">DNS</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button class="open-pdf-btn" onclick="window.open('path/to/dns1.pdf', '_blank')">Ouvrir le PDF 1</button>
+          <button class="open-pdf-btn" onclick="window.open('path/to/dns2.pdf', '_blank')">Ouvrir le PDF 2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="glpiModal" tabindex="-1" role="dialog" aria-labelledby="glpiModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="glpiModalLabel">GLPI</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button class="open-pdf-btn" onclick="window.open('path/to/glpi1.pdf', '_blank')">Ouvrir le PDF 1</button>
+          <button class="open-pdf-btn" onclick="window.open('path/to/glpi2.pdf', '_blank')">Ouvrir le PDF 2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="haproxyModal" tabindex="-1" role="dialog" aria-labelledby="haproxyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="haproxyModalLabel">HA Proxy</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button class="open-pdf-btn" onclick="window.open('path/to/haproxy1.pdf', '_blank')">Ouvrir le PDF 1</button>
+          <button class="open-pdf-btn" onclick="window.open('path/to/haproxy2.pdf', '_blank')">Ouvrir le PDF 2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="proxmoxModal" tabindex="-1" role="dialog" aria-labelledby="proxmoxModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="proxmoxModalLabel">Proxmox</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button class="open-pdf-btn" onclick="window.open('path/to/proxmox1.pdf', '_blank')">Ouvrir le PDF 1</button>
+          <button class="open-pdf-btn" onclick="window.open('path/to/proxmox2.pdf', '_blank')">Ouvrir le PDF 2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="tftpModal" tabindex="-1" role="dialog" aria-labelledby="tftpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tftpModalLabel">TFTP</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button class="open-pdf-btn" onclick="window.open('path/to/tftp1.pdf', '_blank')">Ouvrir le PDF 1</button>
+          <button class="open-pdf-btn" onclick="window.open('path/to/tftp2.pdf', '_blank')">Ouvrir le PDF 2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="voipModal" tabindex="-1" role="dialog" aria-labelledby="voipModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="voipModalLabel">VOIP</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button class="open-pdf-btn" onclick="window.open('path/to/voip1.pdf', '_blank')">Ouvrir le PDF 1</button>
+          <button class="open-pdf-btn" onclick="window.open('path/to/voip2.pdf', '_blank')">Ouvrir le PDF 2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="windowsModal" tabindex="-1" role="dialog" aria-labelledby="windowsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="windowsModalLabel">Windows</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button class="open-pdf-btn" onclick="window.open('path/to/windows1.pdf', '_blank')">Ouvrir le PDF 1</button>
+          <button class="open-pdf-btn" onclick="window.open('path/to/windows2.pdf', '_blank')">Ouvrir le PDF 2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="zabbixModal" tabindex="-1" role="dialog" aria-labelledby="zabbixModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="zabbixModalLabel">Zabbix</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button class="open-pdf-btn" onclick="window.open('path/to/zabbix1.pdf', '_blank')">Ouvrir le PDF 1</button>
+          <button class="open-pdf-btn" onclick="window.open('path/to/zabbix2.pdf', '_blank')">Ouvrir le PDF 2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="fluxModal" tabindex="-1" role="dialog" aria-labelledby="fluxModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="fluxModalLabel">Flux</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button class="open-pdf-btn" onclick="window.open('path/to/flux1.pdf', '_blank')">Ouvrir le PDF 1</button>
+          <button class="open-pdf-btn" onclick="window.open('path/to/flux2.pdf', '_blank')">Ouvrir le PDF 2</button>
         </div>
       </div>
     </div>
