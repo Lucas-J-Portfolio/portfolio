@@ -31,7 +31,49 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- Responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+</head>
 
+<body class="sub_page">
+
+<script>
+  const replacePaths = () => {
+    const replacements = {
+      'C:/Users/lucas/Documents/GitHub/portfolio/doc/DHCP/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/DHCP/',
+      'C:/Users/lucas/Documents/GitHub/portfolio/doc/DNS/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/DNS/',
+      'C:/Users/lucas/Documents/GitHub/portfolio/doc/GLPI/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/GLPI/',
+      'C:/Users/lucas/Documents/GitHub/portfolio/doc/HA Proxy/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/HA Proxy/',
+      'C:/Users/lucas/Documents/GitHub/portfolio/doc/Proxmox/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/Proxmox/',
+      'C:/Users/lucas/Documents/GitHub/portfolio/doc/TFTP/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/TFTP/',
+      'C:/Users/lucas/Documents/GitHub/portfolio/doc/Windows/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/Windows/',
+      'C:/Users/lucas/Documents/GitHub/portfolio/doc/Zabbix/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/Zabbix/',
+      'C:/Users/lucas/Documents/GitHub/portfolio/doc/Autres/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/Autres/',
+      'C:/Users/lucas/Documents/GitHub/portfolio/images/': 'C:/Users/lucas/Desktop/Cours/Portfolio/images/'
+    };
+
+    document.querySelectorAll('[onclick], img').forEach(el => {
+      if (el.hasAttribute('onclick')) {
+        let oldValue = el.getAttribute('onclick');
+        for (const [from, to] of Object.entries(replacements)) {
+          if (oldValue.includes(from)) {
+            el.setAttribute('onclick', oldValue.replace(from, to));
+          }
+        }
+      } else if (el.tagName === 'IMG' && el.hasAttribute('src')) {
+        let oldSrc = el.getAttribute('src');
+        for (const [from, to] of Object.entries(replacements)) {
+          if (oldSrc.includes(from)) {
+            el.setAttribute('src', oldSrc.replace(from, to));
+          }
+        }
+      }
+    });
+  };
+
+  window.addEventListener('DOMContentLoaded', replacePaths);
+</script>
+
+<!-- Le reste de ton code HTML original continue ici, inchangé sauf les chemins -->
+</body>
   <style>
     body.sub_page {
       background-color: #062354;
