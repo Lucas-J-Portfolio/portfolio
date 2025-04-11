@@ -31,49 +31,7 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- Responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
-</head>
 
-<body class="sub_page">
-
-<script>
-  const replacePaths = () => {
-    const replacements = {
-      'C:/Users/lucas/Documents/GitHub/portfolio/doc/DHCP/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/DHCP/',
-      'C:/Users/lucas/Documents/GitHub/portfolio/doc/DNS/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/DNS/',
-      'C:/Users/lucas/Documents/GitHub/portfolio/doc/GLPI/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/GLPI/',
-      'C:/Users/lucas/Documents/GitHub/portfolio/doc/HA Proxy/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/HA Proxy/',
-      'C:/Users/lucas/Documents/GitHub/portfolio/doc/Proxmox/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/Proxmox/',
-      'C:/Users/lucas/Documents/GitHub/portfolio/doc/TFTP/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/TFTP/',
-      'C:/Users/lucas/Documents/GitHub/portfolio/doc/Windows/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/Windows/',
-      'C:/Users/lucas/Documents/GitHub/portfolio/doc/Zabbix/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/Zabbix/',
-      'C:/Users/lucas/Documents/GitHub/portfolio/doc/Autres/': 'C:/Users/lucas/Desktop/Cours/Portfolio/doc/Autres/',
-      'C:/Users/lucas/Documents/GitHub/portfolio/images/': 'C:/Users/lucas/Desktop/Cours/Portfolio/images/'
-    };
-
-    document.querySelectorAll('[onclick], img').forEach(el => {
-      if (el.hasAttribute('onclick')) {
-        let oldValue = el.getAttribute('onclick');
-        for (const [from, to] of Object.entries(replacements)) {
-          if (oldValue.includes(from)) {
-            el.setAttribute('onclick', oldValue.replace(from, to));
-          }
-        }
-      } else if (el.tagName === 'IMG' && el.hasAttribute('src')) {
-        let oldSrc = el.getAttribute('src');
-        for (const [from, to] of Object.entries(replacements)) {
-          if (oldSrc.includes(from)) {
-            el.setAttribute('src', oldSrc.replace(from, to));
-          }
-        }
-      }
-    });
-  };
-
-  window.addEventListener('DOMContentLoaded', replacePaths);
-</script>
-
-<!-- Le reste de ton code HTML original continue ici, inchangé sauf les chemins -->
-</body>
   <style>
     body.sub_page {
       background-color: #062354;
@@ -449,7 +407,7 @@
         </div>
         <div class="modal-body">
           <img src="images/logique.png" class="modal-img" alt="Schéma Logique">
-          <button class="open-pdf-btn" onclick="window.open('path/to/logique.pdf', '_blank')">Ouvrir le PDF</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/logique.pdf', '_blank')">Ouvrir le PDF</button>
         </div>
       </div>
     </div>
@@ -466,7 +424,7 @@
         </div>
         <div class="modal-body">
           <img src="images/physique.png" class="modal-img" alt="Schéma Physique">
-          <button class="open-pdf-btn" onclick="window.open('path/to/physique.pdf', '_blank')">Ouvrir le PDF</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/physique.pdf', '_blank')">Ouvrir le PDF</button>
         </div>
       </div>
     </div>
@@ -482,9 +440,9 @@
           </button>
         </div>
         <div class="modal-body">
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/DHCP/DHCP - DEBIAN.pdf', '_blank')">DHCP - DEBIAN</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/DHCP/DHCP - HA DEBIAN.pdf', '_blank')">DHCP - HA DEBIAN</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/DHCP/DHCP - SERVEUR WINDOWS.pdf', '_blank')">DHCP - SERVEUR WINDOWS</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/DHCP/DHCP - DEBIAN.pdf', '_blank')">DHCP - DEBIAN</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/DHCP/DHCP - HA DEBIAN.pdf', '_blank')">DHCP - HA DEBIAN</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/DHCP/DHCP - SERVEUR WINDOWS.pdf', '_blank')">DHCP - SERVEUR WINDOWS</button>
         </div>
       </div>
     </div>
@@ -500,8 +458,8 @@
           </button>
         </div>
         <div class="modal-body">
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/DNS/DNS - BIND9.pdf', '_blank')">DNS - BIND9</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/DNS/DNS - UNBOUND.pdf', '_blank')">DNS - UNBOUND</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/DNS/DNS - BIND9.pdf', '_blank')">DNS - BIND9</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/DNS/DNS - UNBOUND.pdf', '_blank')">DNS - UNBOUND</button>
         </div>
       </div>
     </div>
@@ -517,7 +475,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/GLPI/GLPI - SERVEUR.pdf', '_blank')">GLPI - SERVEUR</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/GLPI/GLPI - SERVEUR.pdf', '_blank')">GLPI - SERVEUR</button>
         </div>
       </div>
     </div>
@@ -533,8 +491,8 @@
           </button>
         </div>
         <div class="modal-body">
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/HA Proxy/HAPROXY - BDD.pdf', '_blank')">HAPROXY - BDD</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/HA Proxy/HAPROXY - WEB.pdf', '_blank')">HAPROXY - WEB</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/HA Proxy/HAPROXY - BDD.pdf', '_blank')">HAPROXY - BDD</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/HA Proxy/HAPROXY - WEB.pdf', '_blank')">HAPROXY - WEB</button>
         </div>
       </div>
     </div>
@@ -550,8 +508,8 @@
           </button>
         </div>
         <div class="modal-body">
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Proxmox/PROXMOX - PBS + SAUVEGARDE VMs.pdf', '_blank')">PROXMOX - PBS + SAUVEGARDE VMs</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Proxmox/PROXMOX - SERVEUR.pdf', '_blank')">PROXMOX - SERVEUR</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Proxmox/PROXMOX - PBS + SAUVEGARDE VMs.pdf', '_blank')">PROXMOX - PBS + SAUVEGARDE VMs</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Proxmox/PROXMOX - SERVEUR.pdf', '_blank')">PROXMOX - SERVEUR</button>
         </div>
       </div>
     </div>
@@ -567,8 +525,8 @@
           </button>
         </div>
         <div class="modal-body">
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/TFTP/TFTP - SAUVEGARDE & RESTAURATION.pdf', '_blank')">TFTP - SAUVEGARDE & RESTAURATION</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/TFTP/TFTP - SERVEUR.pdf', '_blank')">TFTP - SERVEUR</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/TFTP/TFTP - SAUVEGARDE & RESTAURATION.pdf', '_blank')">TFTP - SAUVEGARDE & RESTAURATION</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/TFTP/TFTP - SERVEUR.pdf', '_blank')">TFTP - SERVEUR</button>
         </div>
       </div>
     </div>
@@ -584,8 +542,8 @@
           </button>
         </div>
         <div class="modal-body">
-          <button class="open-pdf-btn" onclick="window.open('path/to/voip1.pdf', '_blank')">Ouvrir le PDF 1</button>
-          <button class="open-pdf-btn" onclick="window.open('path/to/voip2.pdf', '_blank')">Ouvrir le PDF 2</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/VOIP/voip1.pdf', '_blank')">Ouvrir le PDF 1</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/VOIP/voip2.pdf', '_blank')">Ouvrir le PDF 2</button>
         </div>
       </div>
     </div>
@@ -601,10 +559,10 @@
           </button>
         </div>
         <div class="modal-body">
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Windows/WINDOWS - CREATION GROUPE AD.pdf', '_blank')">WINDOWS - CREATION GROUPE AD</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Windows/WINDOWS - CREATION OU AD.pdf', '_blank')">WINDOWS - CREATION OU AD</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Windows/WINDOWS - CREATION UTILISATEUR AD.pdf', '_blank')">WINDOWS - CREATION UTILISATEUR AD</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Windows/WINDOWS - SERVEUR.pdf', '_blank')">WINDOWS - SERVEUR</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Windows/WINDOWS - CREATION GROUPE AD.pdf', '_blank')">WINDOWS - CREATION GROUPE AD</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Windows/WINDOWS - CREATION OU AD.pdf', '_blank')">WINDOWS - CREATION OU AD</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Windows/WINDOWS - CREATION UTILISATEUR AD.pdf', '_blank')">WINDOWS - CREATION UTILISATEUR AD</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Windows/WINDOWS - SERVEUR.pdf', '_blank')">WINDOWS - SERVEUR</button>
         </div>
       </div>
     </div>
@@ -620,13 +578,13 @@
           </button>
         </div>
         <div class="modal-body">
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Zabbix/ZABBIX - AGENT DEBIAN.pdf', '_blank')">ZABBIX - AGENT DEBIAN</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Zabbix/ZABBIX - AGENT WINDOWS.pdf', '_blank')">ZABBIX - AGENT WINDOWS</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Zabbix/ZABBIX - HA SERVEUR + CONFIG PROXY.pdf', '_blank')">ZABBIX - HA SERVEUR + CONFIG PROXY</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Zabbix/ZABBIX - PROXY BDD DEPORTE.pdf', '_blank')">ZABBIX - PROXY BDD DEPORTE</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Zabbix/ZABBIX - PROXY.pdf', '_blank')">ZABBIX - PROXY</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Zabbix/ZABBIX - SERVEUR BDD DEPORTE.pdf', '_blank')">ZABBIX - SERVEUR BDD DEPORTE</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Zabbix/ZABBIX - SERVEUR.pdf', '_blank')">ZABBIX - SERVEUR</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Zabbix/ZABBIX - AGENT DEBIAN.pdf', '_blank')">ZABBIX - AGENT DEBIAN</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Zabbix/ZABBIX - AGENT WINDOWS.pdf', '_blank')">ZABBIX - AGENT WINDOWS</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Zabbix/ZABBIX - HA SERVEUR + CONFIG PROXY.pdf', '_blank')">ZABBIX - HA SERVEUR + CONFIG PROXY</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Zabbix/ZABBIX - PROXY BDD DEPORTE.pdf', '_blank')">ZABBIX - PROXY BDD DEPORTE</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Zabbix/ZABBIX - PROXY.pdf', '_blank')">ZABBIX - PROXY</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Zabbix/ZABBIX - SERVEUR BDD DEPORTE.pdf', '_blank')">ZABBIX - SERVEUR BDD DEPORTE</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Zabbix/ZABBIX - SERVEUR.pdf', '_blank')">ZABBIX - SERVEUR</button>
         </div>
       </div>
     </div>
@@ -642,7 +600,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <img src="C:/Users/lucas/Documents/GitHub/portfolio/images/flux.png" class="modal-img" alt="Flux">
+          <img src="images/flux.png" class="modal-img" alt="Flux">
         </div>
       </div>
     </div>
@@ -658,11 +616,11 @@
           </button>
         </div>
         <div class="modal-body">
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Autres/APT-CACHER - SERVEUR.pdf', '_blank')">APT-CACHER - SERVEUR</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Autres/BDD - CLUSTER GALERA.pdf', '_blank')">BDD - CLUSTER GALERA</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Autres/FTP - VSFTP + COCKPIT + SSH (SFTP).pdf', '_blank')">FTP - VSFTP + COCKPIT + SSH (SFTP)</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Autres/LAMP - LINUX APACHE2 MARIADB PHP.pdf', '_blank')">LAMP - LINUX APACHE2 MARIADB PHP</button>
-          <button class="open-pdf-btn" onclick="window.open('C:/Users/lucas/Documents/GitHub/portfolio/doc/Autres/SSH - OPENSSH.pdf', '_blank')">SSH - OPENSSH</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Autres/APT-CACHER - SERVEUR.pdf', '_blank')">APT-CACHER - SERVEUR</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Autres/BDD - CLUSTER GALERA.pdf', '_blank')">BDD - CLUSTER GALERA</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Autres/FTP - VSFTP + COCKPIT + SSH (SFTP).pdf', '_blank')">FTP - VSFTP + COCKPIT + SSH (SFTP)</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Autres/LAMP - LINUX APACHE2 MARIADB PHP.pdf', '_blank')">LAMP - LINUX APACHE2 MARIADB PHP</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Autres/SSH - OPENSSH.pdf', '_blank')">SSH - OPENSSH</button>
         </div>
       </div>
     </div>
