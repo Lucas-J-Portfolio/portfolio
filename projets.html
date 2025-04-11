@@ -91,6 +91,7 @@
     }
 
     .tp_item {
+      background: #16213e;
       padding: 20px;
       border-radius: 5px;
       width: 100%;
@@ -147,6 +148,13 @@
       box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .documentation_item:hover,
+    .schemas_item:hover,
+    .service_item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 170, 255, 0.5);
     }
 
     .documentation_item h5,
