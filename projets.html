@@ -91,6 +91,7 @@
     }
 
     .tp_item {
+      background: #16213e;
       padding: 20px;
       border-radius: 5px;
       width: 100%;
@@ -111,6 +112,8 @@
     .tp_item img {
       max-width: 100%;
       height: auto;
+      display: block;
+      margin: 20px auto 0;
     }
 
     .documentation_section,
@@ -147,6 +150,13 @@
       box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .documentation_item:hover,
+    .schemas_item:hover,
+    .service_item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 20px rgba(0, 170, 255, 0.5);
     }
 
     .documentation_item h5,
@@ -189,9 +199,44 @@
       border-radius: 5px;
     }
 
+    .modal-content {
+      background-color: #16213e; /* Set modal background to match the theme */
+      border-radius: 5px;
+    }
+
+    .modal-header {
+      border-bottom: 1px solid #00aaff;
+      padding: 15px 20px;
+    }
+
+    .modal-title {
+      color: #00aaff; /* Set modal title color to match the theme */
+    }
+
+    .modal-body {
+      padding: 20px;
+    }
+
     .modal-body img {
       max-width: 100%;
       height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+
+    .open-pdf-btn {
+      background-color: #00aaff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .open-pdf-btn:hover {
+      background-color: #0088cc;
     }
   </style>
 </head>
@@ -216,7 +261,7 @@
           </a>
 
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
+            <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
