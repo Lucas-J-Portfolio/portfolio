@@ -620,24 +620,48 @@
       </div>
     </div>
   </div>
-
-  <div class="modal fade" id="fluxModal" tabindex="-1" role="dialog" aria-labelledby="fluxModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="fluxModalLabel">Flux</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <img src="images/flux.png" class="modal-img" alt="Flux">
-          <button class="open-pdf-btn" onclick="window.open('images/flux.png', '_blank')">Ouvrir en grand</button>
+<!-- Modal pour Flux avec plusieurs onglets -->
+<div class="modal fade" id="fluxModal" tabindex="-1" role="dialog" aria-labelledby="fluxModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="fluxModalLabel">Flux</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul class="nav nav-tabs" id="fluxTabs" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="flux1-tab" data-toggle="tab" href="#flux1" role="tab" aria-controls="flux1" aria-selected="true">Flux 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="flux2-tab" data-toggle="tab" href="#flux2" role="tab" aria-controls="flux2" aria-selected="false">Flux 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="flux3-tab" data-toggle="tab" href="#flux3" role="tab" aria-controls="flux3" aria-selected="false">Flux 3</a>
+          </li>
+          <!-- Ajoutez plus d'onglets selon vos besoins -->
+        </ul>
+        <div class="tab-content" id="fluxTabsContent">
+          <div class="tab-pane fade show active" id="flux1" role="tabpanel" aria-labelledby="flux1-tab">
+            <img src="images/flux1.png" class="modal-img" alt="Flux 1">
+            <button class="open-pdf-btn" onclick="window.open('images/flux1.png', '_blank')">Ouvrir en grand</button>
+          </div>
+          <div class="tab-pane fade" id="flux2" role="tabpanel" aria-labelledby="flux2-tab">
+            <img src="images/flux2.png" class="modal-img" alt="Flux 2">
+            <button class="open-pdf-btn" onclick="window.open('images/flux2.png', '_blank')">Ouvrir en grand</button>
+          </div>
+          <div class="tab-pane fade" id="flux3" role="tabpanel" aria-labelledby="flux3-tab">
+            <img src="images/flux3.png" class="modal-img" alt="Flux 3">
+            <button class="open-pdf-btn" onclick="window.open('images/flux3.png', '_blank')">Ouvrir en grand</button>
+          </div>
+          <!-- Ajoutez plus de panneaux selon vos besoins -->
         </div>
       </div>
     </div>
   </div>
-
+</div>
   <div class="modal fade" id="autresModal" tabindex="-1" role="dialog" aria-labelledby="autresModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -653,6 +677,12 @@
           <button class="open-pdf-btn" onclick="window.open('doc/Autres/FTP - VSFTP + COCKPIT + SSH (SFTP).pdf', '_blank')">FTP - VSFTP + COCKPIT + SSH (SFTP)</button>
           <button class="open-pdf-btn" onclick="window.open('doc/Autres/LAMP - LINUX APACHE2 MARIADB PHP.pdf', '_blank')">LAMP - LINUX APACHE2 MARIADB PHP</button>
           <button class="open-pdf-btn" onclick="window.open('doc/Autres/SSH - OPENSSH.pdf', '_blank')">SSH - OPENSSH</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Autres/SAMBA - OPENSSH.pdf', '_blank')">SAMBA - OPENSSH</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Autres/APT-CACHER - CLIENT.pdf', '_blank')">APT-CACHER - CLIENT</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Autres/JELLYFIN - SERVEUR.pdf', '_blank')">JELLYFIN - SERVEUR</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Autres/LAMP - LINUX APACHE2 MARIADB PHP.pdf', '_blank')">LAMP</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Autres/NTP - SERVEUR.pdf', '_blank')">NTP - SERVEUR</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Autres/WEBMAIL - POSTFIX DOVECOT RAINLOOP.pdf', '_blank')">WEBMAIL</button>
           <a href="doc/8-1 - BTS SIO - 2025 - Annexe 8-1 - Epreuve E5 - Tableau de synthèse.xlsx" class="btn btn-primary" download>
             Télécharger le Tableau de Synthèse
           </a>
@@ -671,8 +701,14 @@
           </button>
         </div>
         <div class="modal-body">
-          <button class="open-pdf-btn" onclick="window.open('doc/Cisco/CISCO - DOC1.pdf', '_blank')">CISCO - DOC1</button>
-          <button class="open-pdf-btn" onclick="window.open('doc/Cisco/CISCO - DOC2.pdf', '_blank')">CISCO - DOC2</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Cisco/CISCO - AUTHENTIFICATION RADIUS.pdf', '_blank')">CISCO - AUTHENTIFICATION RADIUS</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Cisco/CISCO - NTP.pdf', '_blank')">CISCO - NTP</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Cisco/CISCO - SNMP.pdf', '_blank')">CISCO - SNMP</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Cisco/CISCO - SSH.pdf', '_blank')">CISCO - SSH</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Cisco/CISCO - TRUNK L2.pdf', '_blank')">CISCO - TRUNK L2</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Cisco/CISCO - TRUNK L3.pdf', '_blank')">CISCO - TRUNK L3</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Cisco/CISCO - VLAN PORTS.pdf', '_blank')">CISCO - VLAN PORTS</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Cisco/CISCO - VLAN.pdf', '_blank')">CISCO - VLAN</button>
         </div>
       </div>
     </div>
@@ -688,8 +724,14 @@
           </button>
         </div>
         <div class="modal-body">
-          <button class="open-pdf-btn" onclick="window.open('doc/Stormshield/STORMSHIELD - DOC1.pdf', '_blank')">STORMSHIELD - DOC1</button>
-          <button class="open-pdf-btn" onclick="window.open('doc/Stormshield/STORMSHIELD - DOC2.pdf', '_blank')">STORMSHIELD - DOC2</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Stormshield/STORMSHIELD - LICENCE.pdf', '_blank')">STORMSHIELD - LICENCE</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Stormshield/STORMSHIELD - CONFIGURATION INTERFACE DADMINISTRATION.pdf', '_blank')">STORMSHIELD - INTERFACE ADMIN</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Stormshield/STORMSHIELD - UPDATE.pdf', '_blank')">STORMSHIELD - UPDATE</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Stormshield/STORMSHIELD - CONFIGURATION-SERVEUR-SYSLOG.pdf', '_blank')">STORMSHIELD - SYSLOG</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Stormshield/STORMSHIELD - AJOUT-LDAP-AD.pdf', '_blank')">STORMSHIELD - LDAP-AD</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Stormshield/STORMSHIELD - CONFIGURATION INTERFACE RESEAU.pdf', '_blank')">STORMSHIELD - INTERFACE RESEAU</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Stormshield/STORMSHIELD - CONFIGURATION-ROUTE.pdf', '_blank')">STORMSHIELD - CONFIGURATION ROUTE</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Stormshield/STORMSHIELD - HAUTE-DISPONIBILITE.pdf', '_blank')">STORMSHIELD - HAUTE DISPONIBILITE</button>
         </div>
       </div>
     </div>
