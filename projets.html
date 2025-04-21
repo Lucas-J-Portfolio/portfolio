@@ -664,100 +664,95 @@
           </li>
           <!-- Ajoutez plus d'onglets selon vos besoins -->
         <!-- Modal pour Flux avec plusieurs onglets -->
-<div class="modal fade" id="fluxModal" tabindex="-1" role="dialog" aria-labelledby="fluxModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="fluxModalLabel">Flux</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <ul class="nav nav-tabs" id="fluxTabs" role="tablist">
-          <li class="nav-item">
-            <a class="nav-link active" id="flux1-tab" data-toggle="tab" href="#flux1" role="tab" aria-controls="flux1" aria-selected="true">Cluster BDD</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="flux2-tab" data-toggle="tab" href="#flux2" role="tab" aria-controls="flux2" aria-selected="false">DHCP</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="flux3-tab" data-toggle="tab" href="#flux3" role="tab" aria-controls="flux3" aria-selected="false">DNS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="flux4-tab" data-toggle="tab" href="#flux4" role="tab" aria-controls="flux4" aria-selected="false">GLPI</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="flux5-tab" data-toggle="tab" href="#flux5" role="tab" aria-controls="flux5" aria-selected="false">NTP</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="flux6-tab" data-toggle="tab" href="#flux6" role="tab" aria-controls="flux6" aria-selected="false">SMB</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="flux7-tab" data-toggle="tab" href="#flux7" role="tab" aria-controls="flux7" aria-selected="false">TFTP</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="flux8-tab" data-toggle="tab" href="#flux8" role="tab" aria-controls="flux8" aria-selected="false">VOIP</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="flux9-tab" data-toggle="tab" href="#flux9" role="tab" aria-controls="flux9" aria-selected="false">Web</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="flux10-tab" data-toggle="tab" href="#flux10" role="tab" aria-controls="flux10" aria-selected="false">Zabbix</a>
-          </li>
-        </ul>
-        <div class="tab-content" id="fluxTabsContent">
-          <div class="tab-pane fade show active" id="flux1" role="tabpanel" aria-labelledby="flux1-tab">
-            <img src="images/cluster-bdd.png" class="modal-img" alt="Cluster BDD">
-            <button class="open-pdf-btn" onclick="window.open('images/cluster-bdd.png', '_blank')">Ouvrir en grand</button>
+        <div class="modal fade" id="fluxModal" tabindex="-1" role="dialog" aria-labelledby="fluxModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="fluxModalLabel">Flux</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <ul class="nav nav-tabs" id="fluxTabs" role="tablist">
+                  <li class="nav-item">
+                    <a class="nav-link active" id="flux1-tab" data-toggle="tab" href="#flux1" role="tab" aria-controls="flux1" aria-selected="true">Cluster BDD</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="flux2-tab" data-toggle="tab" href="#flux2" role="tab" aria-controls="flux2" aria-selected="false">DHCP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="flux3-tab" data-toggle="tab" href="#flux3" role="tab" aria-controls="flux3" aria-selected="false">DNS</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="flux4-tab" data-toggle="tab" href="#flux4" role="tab" aria-controls="flux4" aria-selected="false">GLPI</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="flux5-tab" data-toggle="tab" href="#flux5" role="tab" aria-controls="flux5" aria-selected="false">NTP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="flux6-tab" data-toggle="tab" href="#flux6" role="tab" aria-controls="flux6" aria-selected="false">SMB</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="flux7-tab" data-toggle="tab" href="#flux7" role="tab" aria-controls="flux7" aria-selected="false">TFTP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="flux8-tab" data-toggle="tab" href="#flux8" role="tab" aria-controls="flux8" aria-selected="false">VOIP</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="flux9-tab" data-toggle="tab" href="#flux9" role="tab" aria-controls="flux9" aria-selected="false">Web</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="flux10-tab" data-toggle="tab" href="#flux10" role="tab" aria-controls="flux10" aria-selected="false">Zabbix</a>
+                  </li>
+                </ul>
+        
+                <div class="tab-content" id="fluxTabsContent" style="margin-top: 20px;">
+                  <div class="tab-pane fade show active" id="flux1" role="tabpanel" aria-labelledby="flux1-tab">
+                    <img src="images/cluster-bdd.png" class="modal-img" alt="Cluster BDD">
+                    <button class="open-pdf-btn" onclick="window.open('images/cluster-bdd.png', '_blank')">Ouvrir en grand</button>
+                  </div>
+                  <div class="tab-pane fade" id="flux2" role="tabpanel" aria-labelledby="flux2-tab">
+                    <img src="images/dhcp.png" class="modal-img" alt="DHCP">
+                    <button class="open-pdf-btn" onclick="window.open('images/dhcp.png', '_blank')">Ouvrir en grand</button>
+                  </div>
+                  <div class="tab-pane fade" id="flux3" role="tabpanel" aria-labelledby="flux3-tab">
+                    <img src="images/dns.png" class="modal-img" alt="DNS">
+                    <button class="open-pdf-btn" onclick="window.open('images/dns.png', '_blank')">Ouvrir en grand</button>
+                  </div>
+                  <div class="tab-pane fade" id="flux4" role="tabpanel" aria-labelledby="flux4-tab">
+                    <img src="images/glpi.png" class="modal-img" alt="GLPI">
+                    <button class="open-pdf-btn" onclick="window.open('images/glpi.png', '_blank')">Ouvrir en grand</button>
+                  </div>
+                  <div class="tab-pane fade" id="flux5" role="tabpanel" aria-labelledby="flux5-tab">
+                    <img src="images/ntp.png" class="modal-img" alt="NTP">
+                    <button class="open-pdf-btn" onclick="window.open('images/ntp.png', '_blank')">Ouvrir en grand</button>
+                  </div>
+                  <div class="tab-pane fade" id="flux6" role="tabpanel" aria-labelledby="flux6-tab">
+                    <img src="images/smb.png" class="modal-img" alt="SMB">
+                    <button class="open-pdf-btn" onclick="window.open('images/smb.png', '_blank')">Ouvrir en grand</button>
+                  </div>
+                  <div class="tab-pane fade" id="flux7" role="tabpanel" aria-labelledby="flux7-tab">
+                    <img src="images/tftp.png" class="modal-img" alt="TFTP">
+                    <button class="open-pdf-btn" onclick="window.open('images/tftp.png', '_blank')">Ouvrir en grand</button>
+                  </div>
+                  <div class="tab-pane fade" id="flux8" role="tabpanel" aria-labelledby="flux8-tab">
+                    <img src="images/voip.png" class="modal-img" alt="VOIP">
+                    <button class="open-pdf-btn" onclick="window.open('images/voip.png', '_blank')">Ouvrir en grand</button>
+                  </div>
+                  <div class="tab-pane fade" id="flux9" role="tabpanel" aria-labelledby="flux9-tab">
+                    <img src="images/web.png" class="modal-img" alt="Web">
+                    <button class="open-pdf-btn" onclick="window.open('images/web.png', '_blank')">Ouvrir en grand</button>
+                  </div>
+                  <div class="tab-pane fade" id="flux10" role="tabpanel" aria-labelledby="flux10-tab">
+                    <img src="images/zabbix.png" class="modal-img" alt="Zabbix">
+                    <button class="open-pdf-btn" onclick="window.open('images/zabbix.png', '_blank')">Ouvrir en grand</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="tab-pane fade" id="flux2" role="tabpanel" aria-labelledby="flux2-tab">
-            <img src="images/dhcp.png" class="modal-img" alt="DHCP">
-            <button class="open-pdf-btn" onclick="window.open('images/dhcp.png', '_blank')">Ouvrir en grand</button>
-          </div>
-          <div class="tab-pane fade" id="flux3" role="tabpanel" aria-labelledby="flux3-tab">
-            <img src="images/dns.png" class="modal-img" alt="DNS">
-            <button class="open-pdf-btn" onclick="window.open('images/dns.png', '_blank')">Ouvrir en grand</button>
-          </div>
-          <div class="tab-pane fade" id="flux4" role="tabpanel" aria-labelledby="flux4-tab">
-            <img src="images/glpi.png" class="modal-img" alt="GLPI">
-            <button class="open-pdf-btn" onclick="window.open('images/glpi.png', '_blank')">Ouvrir en grand</button>
-          </div>
-          <div class="tab-pane fade" id="flux5" role="tabpanel" aria-labelledby="flux5-tab">
-            <img src="images/ntp.png" class="modal-img" alt="NTP">
-            <button class="open-pdf-btn" onclick="window.open('images/ntp.png', '_blank')">Ouvrir en grand</button>
-          </div>
-          <div class="tab-pane fade" id="flux6" role="tabpanel" aria-labelledby="flux6-tab">
-            <img src="images/smb.png" class="modal-img" alt="SMB">
-            <button class="open-pdf-btn" onclick="window.open('images/smb.png', '_blank')">Ouvrir en grand</button>
-          </div>
-          <div class="tab-pane fade" id="flux7" role="tabpanel" aria-labelledby="flux7-tab">
-            <img src="images/tftp.png" class="modal-img" alt="TFTP">
-            <button class="open-pdf-btn" onclick="window.open('images/tftp.png', '_blank')">Ouvrir en grand</button>
-          </div>
-          <div class="tab-pane fade" id="flux8" role="tabpanel" aria-labelledby="flux8-tab">
-            <img src="images/voip.png" class="modal-img" alt="VOIP">
-            <button class="open-pdf-btn" onclick="window.open('images/voip.png', '_blank')">Ouvrir en grand</button>
-          </div>
-          <div class="tab-pane fade" id="flux9" role="tabpanel" aria-labelledby="flux9-tab">
-            <img src="images/web.png" class="modal-img" alt="Web">
-            <button class="open-pdf-btn" onclick="window.open('images/web.png', '_blank')">Ouvrir en grand</button>
-          </div>
-          <div class="tab-pane fade" id="flux10" role="tabpanel" aria-labelledby="flux10-tab">
-            <img src="images/zabbix.png" class="modal-img" alt="Zabbix">
-            <button class="open-pdf-btn" onclick="window.open('images/zabbix.png', '_blank')">Ouvrir en grand</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-          <!-- Ajoutez plus de panneaux selon vos besoins -->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+        </div>        
   <div class="modal fade" id="autresModal" tabindex="-1" role="dialog" aria-labelledby="autresModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
