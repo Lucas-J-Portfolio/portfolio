@@ -61,7 +61,8 @@
     }
 
     .tp_section {
-      background-color: transparent; /* Remove background color */
+      background-color: transparent;
+      /* Remove background color */
       color: #e0e0e0;
       padding: 40px 0;
       border-radius: 15px;
@@ -91,7 +92,8 @@
     }
 
     .tp_item {
-      background: transparent; /* Remove background color */
+      background: transparent;
+      /* Remove background color */
       padding: 20px;
       border-radius: 5px;
       width: 100%;
@@ -162,7 +164,8 @@
     .documentation_item h5,
     .schemas_item h5,
     .service_item h5 {
-      color: #ffffff; /* Set text color to white */
+      color: #ffffff;
+      /* Set text color to white */
       margin-top: 10px;
     }
 
@@ -195,12 +198,14 @@
 
     .tab-pane {
       padding: 20px;
-      background-color: transparent; /* Remove background color */
+      background-color: transparent;
+      /* Remove background color */
       border-radius: 5px;
     }
 
     .modal-content {
-      background-color: #16213e; /* Set modal background to match the theme */
+      background-color: #16213e;
+      /* Set modal background to match the theme */
       border-radius: 5px;
     }
 
@@ -210,12 +215,14 @@
     }
 
     .modal-title {
-      color: #00aaff; /* Set modal title color to match the theme */
+      color: #00aaff;
+      /* Set modal title color to match the theme */
     }
 
     .modal-body {
       padding: 20px;
-      text-align: center; /* Center the content inside the modal */
+      text-align: center;
+      /* Center the content inside the modal */
     }
 
     .modal-body img {
@@ -374,6 +381,12 @@
               </div>
               <div class="documentation_item" data-toggle="modal" data-target="#autresModal">
                 <h5>Autres</h5>
+              </div>
+              <div class="documentation_item" data-toggle="modal" data-target="#ciscoModal">
+                <h5>Cisco</h5>
+              </div>
+              <div class="documentation_item" data-toggle="modal" data-target="#stormshieldModal">
+                <h5>Stormshield</h5>
               </div>
             </div>
           </div>
@@ -643,6 +656,40 @@
           <a href="doc/8-1 - BTS SIO - 2025 - Annexe 8-1 - Epreuve E5 - Tableau de synthèse.xlsx" class="btn btn-primary" download>
             Télécharger le Tableau de Synthèse
           </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="ciscoModal" tabindex="-1" role="dialog" aria-labelledby="ciscoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ciscoModalLabel">Cisco</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button class="open-pdf-btn" onclick="window.open('doc/Cisco/CISCO - DOC1.pdf', '_blank')">CISCO - DOC1</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Cisco/CISCO - DOC2.pdf', '_blank')">CISCO - DOC2</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="stormshieldModal" tabindex="-1" role="dialog" aria-labelledby="stormshieldModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="stormshieldModalLabel">Stormshield</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button class="open-pdf-btn" onclick="window.open('doc/Stormshield/STORMSHIELD - DOC1.pdf', '_blank')">STORMSHIELD - DOC1</button>
+          <button class="open-pdf-btn" onclick="window.open('doc/Stormshield/STORMSHIELD - DOC2.pdf', '_blank')">STORMSHIELD - DOC2</button>
         </div>
       </div>
     </div>
